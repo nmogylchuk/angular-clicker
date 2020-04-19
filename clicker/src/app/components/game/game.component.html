@@ -1,0 +1,17 @@
+<div class="game">
+  <div class="game__wrapper block">
+    <h2 class="game__title title">{{ gameStarted ? 'Go-go-go!' : 'Let`s game started!' }}</h2>
+    <div class="game__description">Ten seconds is a short period of time, but it feels like 1 hour when your fingers are
+      slamming the mouse.</div>
+    <div class="game__template">
+      <button class="game__button" [ngClass]="{'is-start': !gameStarted, 'is-play': gameStarted}" type="button"
+        (click)="onClick()">
+        <span class="game__subtitle"> {{ gameStarted ? 'click' : 'play' }}</span>
+      </button>
+    </div>
+    <div class='game__result'>
+      <div class="game__counter">Counter: <span class="game__score">{{ counter }}</span></div>
+      <div class="game__timer">Timer: <span class="game__time">{{ timer }}</span></div>
+    </div>
+  </div>
+</div>

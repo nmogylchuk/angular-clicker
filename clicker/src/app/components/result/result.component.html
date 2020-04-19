@@ -1,0 +1,11 @@
+<div class="result">
+    <div class="result__block">
+      <h2 class="result__title title">Congratulations!</h2>
+      <div class="result__output">{{ userName }}, your result is <span class="result__score">{{ score }}</span>!</div>
+      <div class="result__action" *ngIf="!gameEnd">
+        <button class="result__button-end button" [routerLink]="['/']"><i class="fas fa-arrow-left"></i>End game</button>
+        <button class="result__button-start button" [routerLink]="['/game']">New game</button>
+      </div>
+    </div>
+  </div>
+  

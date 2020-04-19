@@ -1,0 +1,39 @@
+@import "./../../../styles.scss";
+
+.result {
+  .result__title {
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .result__output {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .result__score {
+    color: $blue;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  .result__action {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .result__button-end {
+    min-width: 10em;    
+    height: 40px;
+    padding: 10px;
+    margin: 10px auto;
+  }
+  .result__button-start {
+    min-width: 10em;
+    height: 40px;
+    padding: 10px;
+    margin: 10px auto;
+  }
+}

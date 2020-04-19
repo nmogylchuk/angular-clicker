@@ -1,0 +1,16 @@
+<div class="greeting">
+  <div class="greeting__wrapper block">
+    <h2 class="greeting__title title">Welcome to game "Clicker"</h2>
+    <div class="form">
+      <div class="form__item">
+        <label class="form__name" for="username">Put your name for starting</label>
+        <input type="text" class="form__input input__field" id="username" placeholder="Enter your name here" [(ngModel)]="userName">
+      </div>
+
+      <div class="form__item">
+        <button class="greeting__button button" type="button" (click)="gamePage()" [disabled]="!userName">Start a
+          game!</button>
+      </div>
+    </div>
+  </div>
+</div>
