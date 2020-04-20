@@ -20,13 +20,6 @@ export class GameComponent {
       this.gameStarted = false;
   }
 
-  // get gameClass() {
-  //   return {
-  //     'game__button-start': !this.gameStarted,
-  //     'game__button-click': this.gameStarted
-  //   };
-  // }
-
   onClick() {
     if (!this.gameStarted) {
       this.gameStarted = true;
@@ -50,5 +43,9 @@ export class GameComponent {
       }
       this.timer--;
     }, 1000);
+  }
+
+  changeTimer(timer) {
+    this.timer = timer;
   }
 }

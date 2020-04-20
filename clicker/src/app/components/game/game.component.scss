@@ -21,7 +21,7 @@
     margin: 10px;
   }
   .game__score {
-    color: $blue;
+    color: $yellow;
     font-weight: bold;
     font-size: 1.5em;
   }
@@ -51,9 +51,25 @@
 
 .is-start {
   color: #0b0c10;
-  background-color: $blue;
+  background-color: #f2b1d8;
+  border: 1px solid #fff;
 }
 .is-play {
   color: #0b0c10;
-  background-color: $green;
+  background-color: $yellow;
+  border: 1px solid #fff;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 40px 0;
+  .timer__button {
+    min-width: 10em;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+  }
 }

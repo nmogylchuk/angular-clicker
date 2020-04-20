@@ -9,9 +9,14 @@
         <span class="game__subtitle"> {{ gameStarted ? 'click' : 'play' }}</span>
       </button>
     </div>
-    <div class='game__result'>
+    <div class="game__result">
       <div class="game__counter">Counter: <span class="game__score">{{ counter }}</span></div>
       <div class="game__timer">Timer: <span class="game__time">{{ timer }}</span></div>
+    </div>
+    <div class="timer">
+      <button class="timer__button button" type="button" (click)="changeTimer(5)">5 sec</button>
+      <button class="timer__button button" type="button" (click)="changeTimer(10)">10 sec</button>
+      <button class="timer__button button" type="button" (click)="changeTimer(20)">20 sec</button>
     </div>
   </div>
 </div>
