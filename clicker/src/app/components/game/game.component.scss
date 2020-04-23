@@ -1,6 +1,7 @@
 @import "./../../../styles.scss";
 
 .game {
+  width: 100%;
   .game__title {
     padding: 10px;
     text-transform: uppercase;
@@ -23,17 +24,17 @@
   .game__score {
     color: $yellow;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   .game__time {
     color: $blue;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   .game__subtitle {
     position: absolute;
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
   }
 }
@@ -67,8 +68,8 @@
   text-align: center;
   margin: 40px 0;
   .timer__button {
-    min-width: 10em;
-    height: 40px;
+    width: 10rem;
+    height: 2.5rem;
     padding: 10px;
     margin: 10px;
   }

@@ -1,6 +1,7 @@
 @import "./../../../styles.scss";
 
 .greeting {
+  width: 100%;
   .greeting__title {
     padding: 10px;
     text-transform: uppercase;
@@ -9,8 +10,8 @@
     font-size: 2rem;
   }
   .greeting__button {
-    width: 10em;
-    height: 40px;
+    width: 10rem;
+    height: 2.5rem;
     padding: 10px;
     margin: 10px auto;
   }
@@ -35,11 +36,13 @@
     text-transform: uppercase;
     margin: 10px auto;
     text-align: center;
+    font-size: 1.2rem;
   }
 
   .form__input {
     max-width: 100%;
     padding: 10px;
     margin: 10px;
+    text-align: center;
   }
 }

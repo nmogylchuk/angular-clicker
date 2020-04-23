@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsersService } from './../../core/service/users.service';
 
 @Component({
   selector: 'app-game',
@@ -7,22 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent {
-  
   counter: number;
   timer: number;
   gameStarted: boolean;
   timeout;
+  scoreHistory;
 
   constructor(
-    private router: Router) {
-      this.counter = 0;
-      this.timer = 10;
-      this.gameStarted = false;
+    private router: Router, private usersService: UsersService) {
+    this.counter = 0;
+    this.timer = 10;
+    this.gameStarted = false;
   }
 
   onClick() {
     if (!this.gameStarted) {
       this.gameStarted = true;
+      this.usersService.setTimer(this.timer);
       this.startTimer();
       return;
     }
@@ -30,7 +32,16 @@ export class GameComponent {
   }
 
   redirectToResultPage() {
-    window.sessionStorage.setItem('gamer-score', this.counter.toString());
+    this.scoreHistory = this.usersService.getScoreHistory();
+    this.scoreHistory.push({
+      userName: this.usersService.getUserName(),
+      date: new Date(),
+      timer: this.usersService.getTimer(),
+      counter: this.counter,
+      averageCounter: this.counter / Number(this.usersService.getTimer())
+    });
+    this.usersService.setScoreHistory(this.scoreHistory);
+    this.usersService.setScore(this.counter);
     this.router.navigate(['result']);
   }
 

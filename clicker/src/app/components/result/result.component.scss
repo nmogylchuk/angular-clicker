@@ -1,6 +1,7 @@
 @import "./../../../styles.scss";
 
 .result {
+  width: 100%;
   .result__title {
     padding: 10px;
     text-transform: uppercase;
@@ -18,7 +19,7 @@
   .result__score {
     color: $yellow;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   .result__action {
     display: flex;
@@ -27,14 +28,14 @@
     flex-wrap: wrap;
   }
   .result__button-end {
-    min-width: 10em;    
-    height: 40px;
+    width: 10rem;
+    height: 2.5rem;
     padding: 10px;
     margin: 10px;
   }
   .result__button-start {
-    min-width: 10em;
-    height: 40px;
+    width: 10rem;
+    height: 2.5rem;
     padding: 10px;
     margin: 10px;
   }

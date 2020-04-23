@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsersService} from './../../core/service/users.service';
 
 @Component({
   selector: 'app-greeting',
@@ -12,11 +13,11 @@ export class GreetingComponent {
   userName: string;
 
   constructor(
-    private router: Router
-  ) {}
+    private router: Router, private usersService: UsersService) {
+    }
 
   gamePage() {
     this.router.navigate(['game']);
-    window.sessionStorage.setItem('gamer-user-name', this.userName);
+    this.usersService.setUserName(this.userName);
   }
 }

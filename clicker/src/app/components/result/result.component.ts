@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component} from '@angular/core';
+import { UsersService } from './../../core/service/users.service';
 
 @Component({
   selector: 'app-result',
@@ -11,12 +11,10 @@ export class ResultComponent {
   score: string;
   gameEnd: boolean;
 
-  constructor(
-    private route: ActivatedRoute
-  ) {
+  constructor(private usersService: UsersService) {
     this.gameEnd = false;
-    this.score = window.sessionStorage.getItem('gamer-score');
-    this.userName = window.sessionStorage.getItem('gamer-user-name');
+    this.score = this.usersService.getScore();
+    this.userName = this.usersService.getUserName();
   }
 
   endGame() {
