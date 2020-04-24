@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UsersService } from './../../core/service/users.service';
+import { UsersService } from '../../core/service/users.service';
 
 @Component({
   selector: 'app-game',
