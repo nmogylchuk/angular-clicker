@@ -32,9 +32,16 @@ export class GameComponent {
 
   redirectToResultPage() {
     this.scoreHistory = this.usersService.getScoreHistory();
+
+    const date = new Date();
+    const dformat =
+      [date.getDate(), date.getMonth() + 1, date.getFullYear()].join('.') +
+      ' ' +
+      [date.getHours(), date.getMinutes(), date.getSeconds()].join(':');
+
     this.scoreHistory.push({
       userName: this.usersService.getUserName(),
-      date: new Date(),
+      date: dformat,
       timer: this.usersService.getTimer(),
       counter: this.counter,
       averageCounter: this.counter / Number(this.usersService.getTimer())
