@@ -14,8 +14,7 @@ export class GameComponent {
   timeout;
   scoreHistory;
 
-  constructor(
-    private router: Router, private usersService: UsersService) {
+  constructor(private router: Router, private usersService: UsersService) {
     this.counter = 0;
     this.timer = 10;
     this.gameStarted = false;

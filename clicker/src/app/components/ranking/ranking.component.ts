@@ -7,12 +7,12 @@ import { UsersService } from './../../core/service/users.service';
   styleUrls: ['./ranking.component.scss']
 })
 export class RankingComponent {
-
   rankingData;
 
-  constructor(
-    private usersService: UsersService) {
+  constructor(private usersService: UsersService) {
     this.rankingData = [];
-    this.rankingData = this.usersService.getScoreHistory();
+    this.rankingData = this.usersService
+      .getScoreHistory()
+      .sort((a, b) => b.averageCounter - a.averageCounter);
   }
 }
