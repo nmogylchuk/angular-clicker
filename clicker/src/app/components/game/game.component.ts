@@ -58,6 +58,7 @@ export class GameComponent {
         this.gameStarted = false;
         this.redirectToResultPage();
       }
+      
       this.timer--;
     }, 1000);
   }
